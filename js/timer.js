@@ -7,17 +7,16 @@ let resultText = document.getElementById('resultText');
 
 btnTimer.addEventListener('click',(e)=>{
     e.preventDefault();
-
-    
-    // Set seconds : repeat every seconds
     var current = second.value;
+
     if((minute.value > 0) || (second.value > 0)) {
+        
         // Set minutes
-        // setMinutes();
         var minTimer = setInterval(()=>{
             minute.value--;
         } , 60000);
         
+        // Set seconds : repeat every seconds
         var repeatSec = setInterval(()=>{
             if(second.value === 0) {
                 second.value = 59;
@@ -25,13 +24,13 @@ btnTimer.addEventListener('click',(e)=>{
             } else {
                 second.value = current;
             }
-    
             var secTimer = setInterval(()=>{
                 second.value--;
                 if(second.value < 0) {
                     minute.value--;
                     second.value = 59;
                 }
+                // Results
                 if((minute.value == 0) && (second.value == 0)) {
                     clearInterval(secTimer);
                     clearInterval(minTimer);
@@ -50,29 +49,9 @@ btnTimer.addEventListener('click',(e)=>{
                     });
                 }
             } , 1000);
-    
             if(minute.value !== 0) {
                 clearInterval(repeatSec);
             }
-            
         }, 1000);
     }
-    
 });
-
-// Function for minutes
-function setMinutes() {
-    // var minTimer = setInterval(()=>{
-    //     minute.value--;
-    // } , 60000);
-}
-// Function for seconds
-function setSecond() {
-    var secTimer = setInterval(()=>{
-        second.value--;
-        if(second.value < 0) {
-            second.value = 59;
-        }
-    } , 1000);
-}
-
