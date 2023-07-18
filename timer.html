@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer</title>
+    <link rel="stylesheet" href="css/timer.css">
+</head>
+<body>
+    <section class="timer-section">
+        <form action="">
+            <div>
+                <label for="min">
+                    <input type="number" name="min" id="min" value="0">
+                    min
+                </label>
+                <p>:</p>
+                <label for="min">
+                    <input type="number" name="sec" id="sec" value="0">
+                    sec
+                </label>
+            </div>
+            <!-- <input type="number" name="msec" id="msec" value="3000"> -->
+            <button id="btn-timer" type="submit">START</button>
+            <button id="btn-restart" type="button">RESTART</button>
+        </form>
+        <div id="resultText"></div>
+    </section>
+    <script src="js/timer.js"></script>
+</body>
+</html>
