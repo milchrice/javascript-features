@@ -1,0 +1,211 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: monospace;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
+    background-color: rgb(215, 202, 117);
+    z-index: 999;
+}
+
+.nav {
+    list-style-type: none;
+    display: flex;
+    gap: 5rem;
+}
+
+.footer {
+    background-color: black;
+    color: white;
+    list-style-type: none;
+    padding: 1rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+}
+
+.container {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+    margin: 20px 0;
+}
+
+
+.parallax {
+    background-image: url(../img/homebanner.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    z-index: -1;
+}
+
+.title {
+    font-size: 3em;
+    text-align: center;
+}
+
+.title2 {
+    color: white;
+    font-size: 3em;
+    text-align: center;
+}
+
+.container2 {
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.container3 {
+    height: 400px;
+    display: flex;
+    align-items: flex-start;
+    overflow: hidden;
+}
+
+.container4 {
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    overflow: hidden;
+}
+
+.parallax-list {
+    display: flex;
+    list-style-type: none;
+    font-size: 5rem;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+.parallax2 {
+    width: 100%;
+    height: 80vh;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-content: flex-start;
+}
+
+.parallax2 > * {
+    position: absolute;
+    width: 33%;
+}
+
+#background {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+}
+
+#parallax-title {
+    z-index: 999;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-transform: uppercase;
+    font-size: 3rem;
+}
+
+#book {
+    left: 65%;
+    top: 40%;
+}
+
+#brush {
+    left: 38%;
+    top: 59%;
+}
+
+#camera {
+    left: -7%;
+    top: 40%;
+}
+
+#clock {
+    left: -8%;
+    top: 50%;
+}
+
+#cloud {
+    left: -10%;
+    top: -15%;
+}
+
+#keyboard {
+    left: 28%;
+    top: 53%;
+}
+
+#mouse {
+    left: 43%;
+    top: 52%;
+}
+
+#pc {
+    z-index: 999;
+    width: 40%;
+}
+
+#pencil {
+    left: 55%;
+    top: 60%;
+}
+
+#pencil2 {
+    left: 15%;
+    top: 61%;
+}
+
+#popsicle {
+    left: 65%;
+    top: 48%;
+}
+#post {
+    left: 74%;
+    top: 22%;
+}
+#shelf {
+    left: -3%;
+    top: 1%;
+}
+#shelf2 {
+    left: 70%;
+    top: -12%;
+}
+#tablet {
+    left: 7%;
+    top: 35%;
+}
+#tape {
+    left: 55%;
+    top: 50%;
+}
+#tunder {
+    left: 74%;
+    top: 9%;
+}
