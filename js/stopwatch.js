@@ -20,13 +20,16 @@ btnStopwatch.addEventListener('click',(e)=>{
                 mlsecondW.value = 0;
             }
         } ,10);
+        // Pause button
         btnPauseW.addEventListener('click',(e)=>{
             e.preventDefault();
             btnStopwatch.style.display = 'block';
             clearInterval(secWatch);
             clearInterval(mlsecWatch);
         });
+        // Restart button
         btnRestartW.addEventListener('click',(e)=>{
+            e.preventDefault();
             secondW.value = 0;
             mlsecondW.value = 0;
             clearInterval(secWatch);
