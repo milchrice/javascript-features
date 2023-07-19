@@ -1,6 +1,5 @@
 let minute = document.getElementById('min');
 let second = document.getElementById('sec');
-let mlsecond = document.getElementById('msec');
 let btnTimer = document.getElementById('btn-timer');
 let btnRestart = document.getElementById('btn-restart');
 let resultText = document.getElementById('resultText');
@@ -18,6 +17,22 @@ btnTimer.addEventListener('click',(e)=>{
         
         // Set seconds : repeat every seconds
         var repeatSec = setInterval(()=>{
+
+            btnTimer.style.display = 'none';
+            btnRestart.style.display = 'block';
+            let newText = document.createElement('p')
+            btnRestart.addEventListener('click', (e)=>{
+                e.preventDefault();
+                document.querySelector('body').classList.remove("bodyResult");
+                btnTimer.style.display = "block";
+                btnRestart.style.display = "none";
+                newText.innerHTML = "";
+                clearInterval(secTimer);
+                clearInterval(minTimer);
+                minute.value = 0;
+                second.value = 0;
+            });
+
             if(second.value === 0) {
                 second.value = 59;
                 minute.value--;
@@ -34,19 +49,11 @@ btnTimer.addEventListener('click',(e)=>{
                 if((minute.value == 0) && (second.value == 0)) {
                     clearInterval(secTimer);
                     clearInterval(minTimer);
-                    let newText = document.createElement('p')
                     newText.innerHTML = "DONE!";
                     resultText.appendChild(newText);
-                    document.querySelector('body').style.backgroundColor = "coral"
+                    document.querySelector('body').classList.add("bodyResult");
                     btnTimer.style.display = "none";
                     btnRestart.style.display = "block";
-                    btnRestart.addEventListener('click', (e)=>{
-                        e.preventDefault();
-                        document.querySelector('body').style.backgroundColor = "transparent"
-                        btnTimer.style.display = "block";
-                        btnRestart.style.display = "none";
-                        newText.innerHTML = "";
-                    });
                 }
             } , 1000);
             if(minute.value !== 0) {

@@ -39,8 +39,14 @@
 #resultText {
     font-size: 2rem;
     text-align: center;
+    color: white;
 }
 
 #btn-restart {
     display: none;
+    background-color:lightgreen;
+}
+
+.bodyResult {
+    background-color: black;
 }
