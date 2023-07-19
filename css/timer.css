@@ -50,3 +50,7 @@
 .bodyResult {
     background-color: black;
 }
+
+#btn-pauseW, #btn-restartW {
+    display: none;
+}

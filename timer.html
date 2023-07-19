@@ -8,23 +8,44 @@
 </head>
 <body>
     <section class="timer-section">
-        <form action="">
+        <form action="#">
+            <h2>Timer</h2>
             <div>
                 <label for="min">
                     <input type="number" name="min" id="min" value="0">
                     min
                 </label>
                 <p>:</p>
-                <label for="min">
+                <label for="sec">
                     <input type="number" name="sec" id="sec" value="0">
                     sec
                 </label>
             </div>
-            <button id="btn-timer" type="submit">START</button>
+            <button id="btn-timer" type="submit">TIMER START</button>
             <button id="btn-restart" type="button">RESTART</button>
+            <div id="resultText"></div>
         </form>
-        <div id="resultText"></div>
+        <form action="#">
+            <h2>Stopwatch</h2>
+            <div>
+                <label for="secW">
+                    <input type="number" name="secW" id="secW" value="0">
+                    min
+                </label>
+                <p>:</p>
+                <label for="mlsecW">
+                    <input type="number" name="mlsecW" id="mlsecW" value="0">
+                    sec
+                </label>
+            </div>
+            <button id="btn-stopwatch" type="submit">STOPWATCH START</button>
+            <button id="btn-pauseW" type="button">PAUSE</button>
+            <button id="btn-restartW" type="button">RESTART</button>
+            <div id="resultTextW"></div>
+        </form>
     </section>
+    
     <script src="js/timer.js"></script>
+    <script src="js/stopwatch.js"></script>
 </body>
 </html>
