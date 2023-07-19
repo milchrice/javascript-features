@@ -1,3 +1,4 @@
+let minuteW = document.getElementById('minW');
 let secondW = document.getElementById('secW');
 let mlsecondW = document.getElementById('mlsecW');
 let btnStopwatch = document.getElementById('btn-stopwatch');
@@ -12,8 +13,12 @@ btnStopwatch.addEventListener('click',(e)=>{
     btnPauseW.style.display = 'block';
     btnRestartW.style.display = 'block';
 
-    var secWatch = setInterval(()=>{
-        secondW.value++
+    var setWatch = setInterval(()=>{
+        secondW.value++;
+        if(secondW.value == 60) {
+            secondW.value = 0;
+            minuteW.value++;
+        }
         var mlsecWatch = setInterval(()=>{
             mlsecondW.value++;
             if(mlsecondW.value == 100) {
@@ -24,15 +29,16 @@ btnStopwatch.addEventListener('click',(e)=>{
         btnPauseW.addEventListener('click',(e)=>{
             e.preventDefault();
             btnStopwatch.style.display = 'block';
-            clearInterval(secWatch);
+            clearInterval(setWatch);
             clearInterval(mlsecWatch);
         });
         // Restart button
         btnRestartW.addEventListener('click',(e)=>{
             e.preventDefault();
+            minuteW.value = 0;
             secondW.value = 0;
             mlsecondW.value = 0;
-            clearInterval(secWatch);
+            clearInterval(setWatch);
             clearInterval(mlsecWatch);
             btnStopwatch.style.display = 'block';
             btnPauseW.style.display = 'none';
