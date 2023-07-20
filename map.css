@@ -11,6 +11,12 @@ body {
 }
 
 /* mobile */
+/* header */
+.cafe-header img {
+    width: 100%;
+    margin-top: 10px;
+}
+
 /* map */
 #map {
     top: 0;
@@ -168,6 +174,10 @@ img {
     height: 100%;
 }
 
+.cafeimage img {
+    width: 100%;
+    margin-top: 10px;
+}
 
 /* footer */
 
@@ -230,7 +240,7 @@ img {
         width: 100%;
     }
 
-/* pin */
+    /* pin */
     .pin {
         position: absolute;
         z-index: 1;
@@ -263,7 +273,7 @@ img {
     }
 
 
-/* popup */
+    /* popup */
     #target {
         font-size: 16px;
         position: absolute;
@@ -349,44 +359,55 @@ img {
         height: 100%;
     }
 
+    .cafeimage img {
+        width: 100%;
+        margin-top: 800px;
+    }
+
+    /* footer */
+
 }
 
 
 /* display */
 @media screen and (min-width:1200px) {
-/* all */
-body {
-    font-family: 'Merriweather', serif;
-}
 
-/* map */
-.body{
-    font-family: 'Merriweather', serif;}
+    /* all */
+    body {
+        font-family: 'Merriweather', serif;
+    }
 
-/* pin */
+    /* header */
+
+    /* map */
+    .body {
+        font-family: 'Merriweather', serif;
+    }
+
+    /* pin */
     #pin {
-        top: 150px;
+        top: 140px;
         left: 130px;
         background-color: red;
     }
 
     #pin2 {
-        top: 150px;
+        top: 130px;
         left: 230px;
         background-color: red;
     }
 
     #pin3 {
-        top: 200px;
-        left: 380px;
+        top: 190px;
+        left: 370px;
         background-color: red;
     }
 
-/* popup */
+    /* popup */
     #target2 {
         font-size: 16px;
         position: absolute;
-        top: 200px;
+        top: 190px;
         left: 90px;
         z-index: 2;
         font-weight: bold;
@@ -413,7 +434,7 @@ body {
         font-size: 16px;
         position: absolute;
         top: 250px;
-        left: 240px;
+        left: 230px;
         z-index: 2;
         font-weight: bold;
         padding: 5px;
@@ -430,6 +451,15 @@ body {
         left: 50%;
         margin-left: -15px;
         border: 15px solid transparent;
-        border-bottom: 15px solid #F5F5F5;       box-shadow: black;
+        border-bottom: 15px solid #F5F5F5;
+        box-shadow: black;
     }
+
+    .cafeimage img {
+        width: 100%;
+        margin-top: 1100px;
+    }
+
+    /* footer */
+
 }
