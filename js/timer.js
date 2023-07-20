@@ -9,7 +9,6 @@ btnTimer.addEventListener('click',(e)=>{
     var current = second.value;
 
     if((minute.value > 0) || (second.value > 0)) {
-        // Set seconds : repeat every seconds
         btnTimer.style.display = 'none';
         btnRestart.style.display = 'block';
         let newText = document.createElement('p')
@@ -24,13 +23,8 @@ btnTimer.addEventListener('click',(e)=>{
             minute.value = 0;
             second.value = 0;
         });
-
-        if(second.value === 0) {
-            second.value = 59;
-            minute.value--;
-        } else {
-            second.value = current;
-        }
+        
+        // Set timer
         var secTimer = setInterval(()=>{
             second.value--;
             if(second.value < 0) {
@@ -40,7 +34,6 @@ btnTimer.addEventListener('click',(e)=>{
             // Results
             if((minute.value == 0) && (second.value == 0)) {
                 clearInterval(secTimer);
-                clearInterval(minTimer);
                 newText.innerHTML = "DONE!";
                 resultText.appendChild(newText);
                 document.querySelector('body').classList.add("bodyResult");

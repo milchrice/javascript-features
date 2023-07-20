@@ -30,10 +30,12 @@
     border: none;
     font-size: 2rem;
     cursor: pointer;
+    background-color: black;
+    color: white;
 }
 
 .timer-section button:hover {
-    background-color: grey;
+    background-color: rgb(28, 28, 28);
 }
 
 #resultText {
@@ -46,11 +48,26 @@
     display: none;
     background-color:lightgreen;
 }
+#btn-restart:hover {
+    background-color:rgb(108, 224, 108);
+}
 
 .bodyResult {
     background-color: black;
 }
 
-#btn-pauseW, #btn-restartW {
+#btn-pauseW {
     display: none;
+    background-color:lightpink;
+}
+#btn-pauseW:hover {
+    background-color:rgb(255, 162, 176);
+}
+
+#btn-restartW {
+    display: none;
+    background-color:lightgreen;
+}
+#btn-restartW:hover {
+    background-color:rgb(108, 224, 108);
 }
