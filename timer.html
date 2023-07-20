@@ -5,8 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Timer</title>
     <link rel="stylesheet" href="css/timer.css">
+    <link rel="stylesheet" href="css/navbar.css">
 </head>
 <body>
+
+    <nav>
+        <div class="navbar">
+            <h1><a href="#">Logo</a></h1>
+            <ul class="nav">
+                <li><a href="#">Feature 1</a></li>
+                <li><a href="#">Feature 2</a></li>   
+                <li><a href="#">Feature 3</a></li>
+            </ul>
+        </div>
+        <div class="respnav">
+            <a href="#"><img class="hamburger" id="btnMenu" src="img/banner.jpg"></a>
+        </div>
+        <ul class="resp">
+            <li><a href="#">Feature 1</a></li>
+            <li><a href="#">Feature 2</a></li>
+            <li><a href="#">Feature 3</a></li>
+        </ul>
+    </nav>
+
     <section class="timer-section">
         <form action="#">
             <h2>Timer</h2>
@@ -49,7 +70,8 @@
             <div id="resultTextW"></div>
         </form>
     </section>
-    
+
+    <script src="js/navbar.js"></script>
     <script src="js/timer.js"></script>
     <script src="js/stopwatch.js"></script>
 </body>
