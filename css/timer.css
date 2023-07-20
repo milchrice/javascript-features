@@ -1,0 +1,73 @@
+.timer-section form {
+    display: flex;
+    flex-direction: column;
+}
+
+.timer-section form>div {
+    display: flex;
+    align-items: center;
+}
+
+.timer-section input {
+    border: none;
+    width: 100%;
+    font-size: 4rem;
+    text-align: center;
+    background-color: transparent;
+}
+
+.timer-section p {
+    font-size: 4rem;
+}
+
+.timer-section label {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.timer-section button {
+    padding: 3%;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+}
+
+.timer-section button:hover {
+    background-color: rgb(28, 28, 28);
+}
+
+#resultText {
+    font-size: 2rem;
+    text-align: center;
+    color: white;
+}
+
+#btn-restart {
+    display: none;
+    background-color:lightgreen;
+}
+#btn-restart:hover {
+    background-color:rgb(108, 224, 108);
+}
+
+.bodyResult {
+    background-color: black;
+}
+
+#btn-pauseW {
+    display: none;
+    background-color:lightpink;
+}
+#btn-pauseW:hover {
+    background-color:rgb(255, 162, 176);
+}
+
+#btn-restartW {
+    display: none;
+    background-color:lightgreen;
+}
+#btn-restartW:hover {
+    background-color:rgb(108, 224, 108);
+}
