@@ -3,15 +3,16 @@ let rightElements = document.querySelectorAll('.right');
 let leftElements = document.querySelectorAll('.left');
 let allElements = document.querySelectorAll('.layer');
 let containerParallax = document.querySelector('.parallax2');
+let containerScroll = containerParallax.offsetTop;
 let delayElementsValue = 17;
 let scrollDelay = 0.2;
 
 function scrollParallax() {
   let scrollTop = document.documentElement.scrollTop * scrollDelay;
-  containerParallax.style.height = 100 - (scrollTop * 0.05) + 'vh';
+  // let currentHeight = parseFloat(getComputedStyle(containerParallax).height);
+  // containerParallax.style.height = currentHeight - scrollTop * 0.5 + 'px';
 
-
-  rightElements.forEach((element, index) => {
+    rightElements.forEach((element, index) => {
     let delay = delayElementsValue * (index);
     element.style.top = scrollTop * -0.09 + '%';
     
@@ -22,9 +23,8 @@ function scrollParallax() {
   });
   
   leftElements.forEach((element, index) => {
-    let currentTransform = getComputedStyle(element).transform;
     let delay = delayElementsValue * (index);
-    element.style.top = scrollTop * -0.09 + '%';
+    element.style.top = scrollTop * -0.1 + '%';
     
     setTimeout(() => {
       element.style.left = scrollTop * -3 + 'px';
@@ -33,13 +33,12 @@ function scrollParallax() {
   });
   
   allElements.forEach((element, index) => {
-    let delay = delayElementsValue * (index);
     element.style.top = scrollTop * -0.09 + '%';
     
     // element.style.transform = currentTransform + 'rotateY(' + scrollTop * 0.0004 + 'deg)';
   });
-
-}
+  
+};
 
 window.addEventListener('scroll', scrollParallax);
 
