@@ -29,6 +29,7 @@ btnStopwatch.addEventListener('click',(e)=>{
         btnPauseW.addEventListener('click',(e)=>{
             e.preventDefault();
             btnStopwatch.style.display = 'block';
+            btnPauseW.style.display = 'none';
             clearInterval(setWatch);
             clearInterval(mlsecWatch);
         });

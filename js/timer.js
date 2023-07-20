@@ -18,10 +18,10 @@ btnTimer.addEventListener('click',(e)=>{
             btnTimer.style.display = "block";
             btnRestart.style.display = "none";
             newText.innerHTML = "";
-            clearInterval(secTimer);
-            clearInterval(minTimer);
             minute.value = 0;
             second.value = 0;
+            clearInterval(secTimer);
+            clearInterval(minTimer);
         });
         
         // Set timer
