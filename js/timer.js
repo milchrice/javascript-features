@@ -9,56 +9,44 @@ btnTimer.addEventListener('click',(e)=>{
     var current = second.value;
 
     if((minute.value > 0) || (second.value > 0)) {
-        
-        // Set minutes
-        var minTimer = setInterval(()=>{
-            minute.value--;
-        } , 60000);
-        
         // Set seconds : repeat every seconds
-        var repeatSec = setInterval(()=>{
+        btnTimer.style.display = 'none';
+        btnRestart.style.display = 'block';
+        let newText = document.createElement('p')
+        btnRestart.addEventListener('click', (e)=>{
+            e.preventDefault();
+            document.querySelector('body').classList.remove("bodyResult");
+            btnTimer.style.display = "block";
+            btnRestart.style.display = "none";
+            newText.innerHTML = "";
+            clearInterval(secTimer);
+            clearInterval(minTimer);
+            minute.value = 0;
+            second.value = 0;
+        });
 
-            btnTimer.style.display = 'none';
-            btnRestart.style.display = 'block';
-            let newText = document.createElement('p')
-            btnRestart.addEventListener('click', (e)=>{
-                e.preventDefault();
-                document.querySelector('body').classList.remove("bodyResult");
-                btnTimer.style.display = "block";
-                btnRestart.style.display = "none";
-                newText.innerHTML = "";
+        if(second.value === 0) {
+            second.value = 59;
+            minute.value--;
+        } else {
+            second.value = current;
+        }
+        var secTimer = setInterval(()=>{
+            second.value--;
+            if(second.value < 0) {
+                minute.value--;
+                second.value = 59;
+            }
+            // Results
+            if((minute.value == 0) && (second.value == 0)) {
                 clearInterval(secTimer);
                 clearInterval(minTimer);
-                minute.value = 0;
-                second.value = 0;
-            });
-
-            if(second.value === 0) {
-                second.value = 59;
-                minute.value--;
-            } else {
-                second.value = current;
+                newText.innerHTML = "DONE!";
+                resultText.appendChild(newText);
+                document.querySelector('body').classList.add("bodyResult");
+                btnTimer.style.display = "none";
+                btnRestart.style.display = "block";
             }
-            var secTimer = setInterval(()=>{
-                second.value--;
-                if(second.value < 0) {
-                    minute.value--;
-                    second.value = 59;
-                }
-                // Results
-                if((minute.value == 0) && (second.value == 0)) {
-                    clearInterval(secTimer);
-                    clearInterval(minTimer);
-                    newText.innerHTML = "DONE!";
-                    resultText.appendChild(newText);
-                    document.querySelector('body').classList.add("bodyResult");
-                    btnTimer.style.display = "none";
-                    btnRestart.style.display = "block";
-                }
-            } , 1000);
-            if(minute.value !== 0) {
-                clearInterval(repeatSec);
-            }
-        }, 1000);
+        } , 1000);
     }
 });
