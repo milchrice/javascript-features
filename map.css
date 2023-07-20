@@ -1,0 +1,435 @@
+/* all */
+body {
+    margin: 10px;
+    background-color: #fbd7564e;
+    font-family: 'Merriweather', serif;
+}
+
+.title {
+    margin-top: 50px;
+    margin-left: 20px;
+}
+
+/* mobile */
+/* map */
+#map {
+    top: 0;
+    left: 0;
+    width: 1000px;
+    height: auto;
+    margin: 5px 5px 5px 5px;
+}
+
+
+.container {
+    position: relative;
+    overflow: scroll;
+    width: 300px;
+    height: 400px;
+}
+
+/* pin */
+.pinA {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.pinB {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.pinC {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+
+.pin {
+    position: absolute;
+    z-index: 1;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    color: #FFF;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#pin {
+    bottom: 200px;
+    left: 180px;
+    background-color: red;
+}
+
+#pin2 {
+    bottom: 200px;
+    left: 300px;
+    background-color: red;
+}
+
+#pin3 {
+    top: 240px;
+    left: 500px;
+    background-color: red;
+}
+
+/* popup */
+#target {
+    font-size: 15px;
+    position: absolute;
+    top: 220px;
+    left: 90px;
+    z-index: 2;
+    font-weight: bold;
+    padding: 12px;
+    background-color: #F5F5F5;
+    display: none;
+    box-shadow: 5px 5px 5px black;
+    width: 200px;
+}
+
+#target:before {
+    content: "";
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    margin-left: -15px;
+    border: 15px solid transparent;
+    border-bottom: 15px solid #F5F5F5;
+
+    box-shadow: black;
+
+}
+
+#target2 {
+    font-size: 15px;
+    position: absolute;
+    top: 220px;
+    left: 200px;
+    z-index: 2;
+    font-weight: bold;
+    padding: 12px;
+    background-color: #F5F5F5;
+    display: none;
+    box-shadow: 5px 5px 5px black;
+    width: 200px;
+}
+
+#target2:before {
+    content: "";
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    margin-left: -15px;
+    border: 15px solid transparent;
+    border-bottom: 15px solid #F5F5F5;
+
+    box-shadow: black;
+
+}
+
+#target3 {
+    font-size: 15px;
+    position: absolute;
+    top: 300px;
+    left: 400px;
+    z-index: 2;
+    font-weight: bold;
+    padding: 12px;
+    background-color: #F5F5F5;
+    display: none;
+    box-shadow: 5px 5px 5px black;
+    width: 200px;
+}
+
+#target3:before {
+    content: "";
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    margin-left: -15px;
+    border: 15px solid transparent;
+    border-bottom: 15px solid #F5F5F5;
+    box-shadow: black;
+}
+
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* footer */
+
+
+/* tablet */
+@media screen and (min-width:768px) {
+
+    /* map */
+    .container {
+        position: relative;
+        overflow: scroll;
+        width: 700px;
+        height: 900px;
+        margin: 40px;
+    }
+
+
+    #pin {
+        bottom: 700px;
+        left: 180px;
+        background-color: red;
+    }
+
+    #pin2 {
+        bottom: 700px;
+        left: 300px;
+        background-color: red;
+    }
+
+}
+
+
+/* tablet horizontal size */
+@media screen and (min-width:1180px) {
+
+    /* header */
+
+    /* all */
+    body {
+        font-family: 'Merriweather', serif;
+    }
+
+    /* map */
+    .container {
+        position: absolute;
+        width: 960px;
+        height: 960px;
+    }
+
+    #map {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 80%;
+        height: auto;
+        margin: 5px 5px 5px 5px;
+    }
+
+    #map img {
+        width: 100%;
+    }
+
+/* pin */
+    .pin {
+        position: absolute;
+        z-index: 1;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        color: #FFF;
+        text-align: center;
+        font-weight: bold;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+
+    #pin {
+        top: 150px;
+        left: 130px;
+        background-color: red;
+    }
+
+    #pin2 {
+        top: 150px;
+        left: 230px;
+        background-color: red;
+    }
+
+    #pin3 {
+        top: 200px;
+        left: 380px;
+        background-color: red;
+    }
+
+
+/* popup */
+    #target {
+        font-size: 16px;
+        position: absolute;
+        top: 230px;
+        left: 40px;
+        z-index: 2;
+        font-weight: bold;
+        padding: 5px;
+        background-color: #F5F5F5;
+        display: none;
+        box-shadow: 5px 5px 5px black;
+        width: 300px;
+    }
+
+    #target:before {
+        content: "";
+        position: absolute;
+        top: -30px;
+        left: 50%;
+        margin-left: -15px;
+        border: 15px solid transparent;
+        border-bottom: 15px solid #F5F5F5;
+
+        box-shadow: black;
+
+    }
+
+    #target2 {
+        font-size: 16px;
+        position: absolute;
+        top: 220px;
+        left: 90px;
+        z-index: 2;
+        font-weight: bold;
+        padding: 5px;
+        background-color: #F5F5F5;
+        display: none;
+        box-shadow: 5px 5px 5px black;
+        width: 300px;
+    }
+
+    #target2:before {
+        content: "";
+        position: absolute;
+        top: -30px;
+        left: 50%;
+        margin-left: -15px;
+        border: 15px solid transparent;
+        border-bottom: 15px solid #F5F5F5;
+
+        box-shadow: black;
+
+    }
+
+    #target3 {
+        font-size: 16px;
+        position: absolute;
+        top: 270px;
+        left: 240px;
+        z-index: 2;
+        font-weight: bold;
+        padding: 5px;
+        background-color: #F5F5F5;
+        display: none;
+        box-shadow: 5px 5px 5px black;
+        width: 300px;
+    }
+
+    #target3:before {
+        content: "";
+        position: absolute;
+        top: -30px;
+        left: 50%;
+        margin-left: -15px;
+        border: 15px solid transparent;
+        border-bottom: 15px solid #F5F5F5;
+        box-shadow: black;
+
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+
+}
+
+
+/* display */
+@media screen and (min-width:1200px) {
+/* all */
+body {
+    font-family: 'Merriweather', serif;
+}
+
+/* map */
+.body{
+    font-family: 'Merriweather', serif;}
+
+/* pin */
+    #pin {
+        top: 150px;
+        left: 130px;
+        background-color: red;
+    }
+
+    #pin2 {
+        top: 150px;
+        left: 230px;
+        background-color: red;
+    }
+
+    #pin3 {
+        top: 200px;
+        left: 380px;
+        background-color: red;
+    }
+
+/* popup */
+    #target2 {
+        font-size: 16px;
+        position: absolute;
+        top: 200px;
+        left: 90px;
+        z-index: 2;
+        font-weight: bold;
+        padding: 5px;
+        background-color: #F5F5F5;
+        display: none;
+        box-shadow: 5px 5px 5px black;
+        width: 300px;
+    }
+
+    #target2:before {
+        content: "";
+        position: absolute;
+        top: -30px;
+        left: 50%;
+        margin-left: -15px;
+        border: 15px solid transparent;
+        border-bottom: 15px solid #F5F5F5;
+        box-shadow: black;
+
+    }
+
+    #target3 {
+        font-size: 16px;
+        position: absolute;
+        top: 250px;
+        left: 240px;
+        z-index: 2;
+        font-weight: bold;
+        padding: 5px;
+        background-color: #F5F5F5;
+        display: none;
+        box-shadow: 5px 5px 5px black;
+        width: 300px;
+    }
+
+    #target3:before {
+        content: "";
+        position: absolute;
+        top: -30px;
+        left: 50%;
+        margin-left: -15px;
+        border: 15px solid transparent;
+        border-bottom: 15px solid #F5F5F5;       box-shadow: black;
+    }
+}
