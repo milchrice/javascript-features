@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&family=Rubik:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,800;1,900&display=swap');
+
 * {
     box-sizing: border-box;
     padding: 0;
@@ -5,207 +7,132 @@
 }
 
 body {
-    font-family: monospace;
+    font-family: 'Rubik', sans-serif;;
 }
 
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    font-size: 1.2rem;
-    padding: 1rem 2rem;
-    background-color: rgb(215, 202, 117);
-    z-index: 999;
-}
-
-.nav {
-    list-style-type: none;
-    display: flex;
-    gap: 5rem;
-}
-
-.footer {
-    background-color: black;
-    color: white;
-    list-style-type: none;
-    padding: 1rem 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 5rem;
-}
-
-.container {
-    position: relative;
-    height: 400px;
-    overflow: hidden;
-    margin: 20px 0;
-}
-
-
-.parallax {
-    background-image: url(../img/homebanner.jpg);
-    background-size: cover;
-    background-position: center;
+.parallax-svg {
     width: 100%;
-    height: 100vh;
-    position: absolute;
-    z-index: -1;
-}
-
-.title {
-    font-size: 3em;
-    text-align: center;
-}
-
-.title2 {
-    color: white;
-    font-size: 3em;
-    text-align: center;
-}
-
-.container2 {
-    height: 400px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     overflow: hidden;
-}
-
-.container3 {
-    height: 400px;
-    display: flex;
-    align-items: flex-start;
-    overflow: hidden;
-}
-
-.container4 {
-    height: 400px;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    overflow: hidden;
-}
-
-.parallax-list {
-    display: flex;
-    list-style-type: none;
-    font-size: 5rem;
-    text-transform: uppercase;
-    font-weight: 900;
+    position: relative;
 }
 
 .parallax2 {
     width: 100%;
-    height: 80vh;
-    text-align: center;
+    height: 100vh;
     position: relative;
     overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-content: flex-start;
 }
 
-.parallax2 > * {
+.parallax2 img {
     position: absolute;
-    width: 33%;
+    width: 35%;
+}
+
+.title {
+    color: white;
+    position: absolute;
+    z-index: 999;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    font-size: 5rem;
+    z-index: 999;
+    text-transform: uppercase;
+    letter-spacing: 1vw;
+}
+
+.svgtitle {
+    color: white;
+    position: absolute;
+    z-index: 999;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, 90%);
+    font-size: 5rem;
+    z-index: 30;
+    text-transform: uppercase;
+    letter-spacing: 1vw;
 }
 
 #background {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     width: 100%;
-    height: 100%;
-}
-
-#parallax-title {
-    z-index: 999;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    text-transform: uppercase;
-    font-size: 3rem;
-}
-
-#book {
-    left: 65%;
-    top: 40%;
-}
-
-#brush {
-    left: 38%;
-    top: 59%;
-}
-
-#camera {
-    left: -7%;
-    top: 40%;
-}
-
-#clock {
-    left: -8%;
-    top: 50%;
-}
-
-#cloud {
-    left: -10%;
-    top: -15%;
-}
-
-#keyboard {
-    left: 28%;
-    top: 53%;
-}
-
-#mouse {
-    left: 43%;
-    top: 52%;
 }
 
 #pc {
-    z-index: 999;
-    width: 40%;
+    transform: translate(100%, 40%);
+}
+
+#book {
+    transform: translate(190%, 70%);
+    z-index: 5;
+}
+
+#bottle {
+    transform: translate(165%, 57%);
+    z-index: 1;
+}
+
+#camera {
+    transform: translate(-22%, 70%);
+}
+
+#clock {
+    transform: translate(-17%, 85%);
+}
+
+#cloud {
+    transform: translate(-30%, -20%);
+}
+
+#keyboard {
+    transform: translate(73%, 96%);
+}
+
+#mouse {
+    transform: translate(117%, 93%);
 }
 
 #pencil {
-    left: 55%;
-    top: 60%;
+    transform: translate(150%, 108%);
 }
 
 #pencil2 {
-    left: 15%;
-    top: 61%;
+    transform: translate(25%, 108%);
 }
 
 #popsicle {
-    left: 65%;
-    top: 48%;
+    transform: translate(185%, 85%);
+    z-index: 10;
 }
+
 #post {
-    left: 74%;
-    top: 22%;
+    transform: translate(215%, 30%);
 }
+
 #shelf {
-    left: -3%;
-    top: 1%;
+    transform: translate(-4%, 18%);
 }
-#shelf2 {
-    left: 70%;
-    top: -12%;
-}
+
 #tablet {
-    left: 7%;
-    top: 35%;
+    transform: translate(20%, 60%);
 }
+
 #tape {
-    left: 55%;
-    top: 50%;
+    transform: translate(160%, 90%);
 }
+
 #tunder {
-    left: 74%;
-    top: 9%;
+    transform: translate(215%, 5%);
 }
+
+.text {
+    background-color: aqua;
+}
+
+/* .left {
+    filter: drop-shadow(-5px 5px 1px rgba(0, 0, 0, 0.3));
+}
+
+.right {
+    filter: drop-shadow(-5px 5px 1px rgba(0, 0, 0, 0.3));
+} */
